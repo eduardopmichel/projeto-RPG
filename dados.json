@@ -1,0 +1,152 @@
+{
+    "classes": [
+        {
+            "nome": "Guerreiro",
+            "vida": "1d10 + Corpo",
+            "descricao": "Personagem focado em combate corpo a corpo."
+        },
+        {
+            "nome": "Ladino",
+            "vida": "1d8 + corpo",
+            "descricao": "Personagem especializado em furtividade e versatilidade."
+        },
+        {
+            "nome": "Mago",
+            "vida": "1d6 + corpo",
+            "descricao": "Personagem com habilidades mágicas."
+        }
+    ],
+
+    "itens": [
+        {
+            "nome": "Machado",
+            "tipo": "Duas Mãos",
+            "alcance": "Corpo",
+            "dano": "1d12 + Corpo",
+            "descricao": "Um grande machado de guerra.",
+            "disponibilidade": ["Guerreiro"]
+        },
+        {
+            "nome": "Espada Curta",
+            "tipo": "Uma Mão",
+            "alcance": "Corpo",
+            "dano": "1d8 + Corpo ou Reflexos",
+            "descricao": "Uma espada longa comum.",
+            "disponibilidade": ["Guerreiro", "Ladino"]
+        },
+
+        {
+            "nome": "Arco Curto",
+            "tipo": "Duas Mãos",
+            "alcance": "Longo",
+            "dano": "1d6 + Reflexos",
+            "descricao": "Um arco curto para disparos precisos.",
+            "disponibilidade": ["Guerreiro", "Ladino"]
+        },
+        {
+            "nome": "Cajado Mágico",
+            "tipo": "Cajado",
+            "alcance": "Longo",
+            "dano": "1d8 + Mente",
+            "descricao": "Um cajado utilizado por magos para conjurações.",
+            "disponibilidade": ["Mago"]
+        },
+        {
+            "nome": "Amardura de Aço",
+            "tipo": "Armadura Pesada",
+            "defesa": "16",
+            "descricao": "Uma armadura completa de aço",
+            "disponibilidade": ["Guerreiro"]
+        },
+        {
+            "nome": "Amardura de Couro",
+            "tipo": "Armadura Leve",
+            "defesa": "11 + Reflexos",
+            "descricao": "Um colete de couro batido.",
+            "disponibilidade": ["Guerreiro", "Ladino"]
+        },
+        {
+            "nome": "Manto Arcano",
+            "tipo": "Manto",
+            "defesa": "10 + Mente",
+            "descricao": "Um manto de lã arcana.",
+            "disponibilidade": ["Mago"]
+        },
+        {
+            "nome": "Escudo",
+            "tipo": "Escudo",
+            "defesa": "+2",
+            "descricao": "Um escudo de madeira.",
+            "disponibilidade": ["Guerreiro"]
+        }
+    ],
+    "habilidades": [
+        {
+            "nome": "Investida Brutal",
+            "descricao": "O personagem corre o dobro de seu movimento em uma investida poderosa, causando dano adicional e derrubando o inimigo.",
+            "dano": "Dano da arma + 1d6",
+            "alcance": "Corpo",
+            "tempoDeRecarga": "3 rodadas",
+            "disponibilidade": ["Guerreiro"]
+        },
+        {
+            "nome": "Fúria Berserk",
+            "descricao": "O personagem entra em um estado de fúria, aumentando seu dano e resistência por um curto período.",
+            "efeito": "Aumenta todo dano causado em +2 e ganha resistência a ataques físicos por 1d4 rodadas.",
+            "tempoDeRecarga": "4 rodadas",
+            "disponibilidade": ["Guerreiro"]
+        },
+        {
+            "nome": "Ataque Furtivo",
+            "descricao": "O personagem realiza um ataque furtivo, causando dano letal.",
+            "dano": "Dano da arma + 3d6",
+            "alcance": "Alcance da arma",
+            "tempoDeRecarga": "5 rodadas",
+            "disponibilidade": ["Ladino"]
+        },
+        {
+            "nome": "Furtividade Aprimorada",
+            "descricao": "O personagem utiliza técnicas de camuflagem aprimoradas para se tornar praticamente invisível ao ambiente.",
+            "efeito": "Torna-se invisível por 1d4 rodadas ou até realizar um ataque.",
+            "tempoDeRecarga": "4 rodadas",
+            "disponibilidade": ["Ladino"]
+        },
+        {
+            "nome": "Descarga Elétrica",
+            "descricao": "O personagem libera uma poderosa descarga elétrica, atingindo um alvo com energia estática.",
+            "dano": "2d12 + Mente",
+            "alcance": "Médio",
+            "tempoDeRecarga": "2 rodadas",
+            "disponibilidade": ["Mago"]
+        },
+        {
+            "nome": "Bola de Fogo",
+            "descricao": "O personagem conjura uma bola de fogo ardente que explode ao atingir o alvo, causando dano em área.",
+            "dano": "3d6 + Mente",
+            "alcance": "Longo",
+            "tempoDeRecarga": "4 rodadas",
+            "disponibilidade": ["Mago"]
+        },
+        {
+            "nome": "Reflexos Aprimorados",
+            "descricao": "O personagem treinou seus reflexos ao extremo, permitindo esquivas precisas e rápidas.",
+            "efeito": "Inimigos tem desvantagem ao te atacar por 1d4 rodadas.",
+            "tempoDeRecarga": "4 rodadas",
+            "disponibilidade": ["Guerreiro", "Ladino"]
+        },
+        {
+            "nome": "Barreira Arcana",
+            "descricao": "O personagem cria uma barreira mágica que bloqueia ataques inimigos.",
+            "efeito": "Usando uma reação, o personagem cria uma barreira que absorve até 1d10 + Mente de dano",
+            "tempoDeRecarga": "3 rodadas",
+            "disponibilidade": ["Guerreiro", "Mago"]
+        },
+        {
+            "nome": "Ilusão Enganosa",
+            "descricao": "O personagem cria uma ilusão enganosa, confundindo os inimigos e desviando sua atenção por um curto período.",
+            "efeito": "Cria ilusões que distraem os inimigos por 1d4 rodadas ou até serem atacadas.",
+            "tempoDeRecarga": "4 rodadas",
+            "disponibilidade": ["Ladino", "Mago"]
+        }
+    ]
+}
