@@ -2,17 +2,17 @@
     "classes": [
         {
             "nome": "Guerreiro",
-            "vida": "1d10 + Corpo",
+            "vida": "1d10 + bonusCorpo",
             "descricao": "Personagem focado em combate corpo a corpo."
         },
         {
             "nome": "Ladino",
-            "vida": "1d8 + corpo",
+            "vida": "1d8 + bonusCorpo",
             "descricao": "Personagem especializado em furtividade e versatilidade."
         },
         {
             "nome": "Mago",
-            "vida": "1d6 + corpo",
+            "vida": "1d6 + bonusCorpo",
             "descricao": "Personagem com habilidades mágicas."
         }
     ],
@@ -20,61 +20,61 @@
     "itens": [
         {
             "nome": "Machado",
-            "tipo": "Duas Mãos",
+            "tipo": ["Arma", "Duas mãos"],
             "alcance": "Corpo",
-            "dano": "1d12 + Corpo",
+            "dano": "1d12 + bonusCorpo",
             "descricao": "Um grande machado de guerra.",
             "disponibilidade": ["Guerreiro"]
         },
         {
             "nome": "Espada Curta",
-            "tipo": "Uma Mão",
+            "tipo": ["Arma", "Uma mão"],
             "alcance": "Corpo",
-            "dano": "1d8 + Corpo ou Reflexos",
+            "dano": "1d8 + bonusCorpo ou bonusReflexos",
             "descricao": "Uma espada longa comum.",
             "disponibilidade": ["Guerreiro", "Ladino"]
         },
 
         {
             "nome": "Arco Curto",
-            "tipo": "Duas Mãos",
+            "tipo": ["Arma", "Duas mãos"],
             "alcance": "Longo",
-            "dano": "1d6 + Reflexos",
+            "dano": "1d6 + bonusReflexos",
             "descricao": "Um arco curto para disparos precisos.",
             "disponibilidade": ["Guerreiro", "Ladino"]
         },
         {
             "nome": "Cajado Mágico",
-            "tipo": "Cajado",
+            "tipo": ["Arma", "Duas mãos"],
             "alcance": "Longo",
-            "dano": "1d8 + Mente",
+            "dano": "1d8 + bonusMente",
             "descricao": "Um cajado utilizado por magos para conjurações.",
             "disponibilidade": ["Mago"]
         },
         {
             "nome": "Amardura de Aço",
-            "tipo": "Armadura Pesada",
+            "tipo": ["Armadura", "Pesada"],
             "defesa": "16",
             "descricao": "Uma armadura completa de aço",
             "disponibilidade": ["Guerreiro"]
         },
         {
             "nome": "Amardura de Couro",
-            "tipo": "Armadura Leve",
-            "defesa": "11 + Reflexos",
+            "tipo": ["Armadura", "Leve"],
+            "defesa": "11 + bonusReflexos",
             "descricao": "Um colete de couro batido.",
             "disponibilidade": ["Guerreiro", "Ladino"]
         },
         {
             "nome": "Manto Arcano",
-            "tipo": "Manto",
-            "defesa": "10 + Mente",
+            "tipo": ["Armadura", "Manto"],
+            "defesa": "10 + bonusMente",
             "descricao": "Um manto de lã arcana.",
             "disponibilidade": ["Mago"]
         },
         {
             "nome": "Escudo",
-            "tipo": "Escudo",
+            "tipo": ["Armadura", "Escudo"],
             "defesa": "+2",
             "descricao": "Um escudo de madeira.",
             "disponibilidade": ["Guerreiro"]
@@ -114,7 +114,7 @@
         {
             "nome": "Descarga Elétrica",
             "descricao": "O personagem libera uma poderosa descarga elétrica, atingindo um alvo com energia estática.",
-            "dano": "2d12 + Mente",
+            "dano": "2d12 + bonusMente",
             "alcance": "Médio",
             "tempoDeRecarga": "2 rodadas",
             "disponibilidade": ["Mago"]
@@ -122,7 +122,7 @@
         {
             "nome": "Bola de Fogo",
             "descricao": "O personagem conjura uma bola de fogo ardente que explode ao atingir o alvo, causando dano em área.",
-            "dano": "3d6 + Mente",
+            "dano": "3d6 + bonusMente",
             "alcance": "Longo",
             "tempoDeRecarga": "4 rodadas",
             "disponibilidade": ["Mago"]
